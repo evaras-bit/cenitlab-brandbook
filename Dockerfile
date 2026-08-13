@@ -13,4 +13,3 @@ RUN rm -f /usr/share/nginx/html/Dockerfile \
           /usr/share/nginx/html/_DESPLEGAR-EN-EASYPANEL.md
 
 EXPOSE 80
-HEALTHCHECK CMD wget -qO- http://localhost/ >/dev/null 2>&1 || exit 1
