@@ -1,0 +1,18 @@
+<svg width="560" height="170" viewBox="0 0 560 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cenit Lab">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap');</style>
+    <linearGradient id="z" x1="52" y1="20" x2="68" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#D8B86E"/><stop offset="1" stop-color="#A6BEDE"/></linearGradient>
+    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#C6A35B" stop-opacity="0.45"/><stop offset="1" stop-color="#C6A35B" stop-opacity="0"/></radialGradient>
+  </defs>
+  <g transform="translate(30,25) scale(1.2)">
+    <circle cx="60" cy="20" r="18" fill="url(#g)"/>
+    <path d="M28 98 C 33 54, 50 30, 60 22" stroke="#D8B86E" stroke-width="7.5" stroke-linecap="round"/>
+    <path d="M92 98 C 87 54, 70 30, 60 22" stroke="#A6BEDE" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="60" cy="20" r="10.5" stroke="#D8B86E" stroke-width="1.4" opacity="0.45"/>
+    <circle cx="60" cy="20" r="6" fill="url(#z)"/>
+    <circle cx="58" cy="18" r="1.8" fill="#FBF6EA" opacity="0.95"/>
+  </g>
+  <text x="180" y="108" font-family="'Space Grotesk',sans-serif" font-size="62" letter-spacing="4">
+    <tspan font-weight="600" fill="#F4F1E9">CENIT</tspan><tspan font-weight="600" fill="#D8B86E" dx="14">LAB</tspan>
+  </text>
+</svg>

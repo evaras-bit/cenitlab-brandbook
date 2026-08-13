@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cenit Lab · Manual de Marca</title>
+<meta name="description" content="Manual de marca de Cenit Lab. Designing the Future of Human–Machine Collaboration.">
+<!-- Favicon / PWA -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0D1430">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cenit Lab · Manual de Marca">
+<meta property="og:description" content="Sistema de identidad visual de Cenit Lab. Designing the Future of Human–Machine Collaboration.">
+<meta property="og:image" content="https://why.cenitlab.cl/assets/icons/og-image.png">
+<meta property="og:url" content="https://why.cenitlab.cl/">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Fuentes self-hosted (sin dependencia de Google Fonts) -->
+<style>
+  /* Space Grotesk */
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/space-grotesk-400.woff2') format('woff2')}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/space-grotesk-500.woff2') format('woff2')}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/space-grotesk-600.woff2') format('woff2')}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/space-grotesk-700.woff2') format('woff2')}
+  /* IBM Plex Sans */
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-300.woff2') format('woff2')}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-400.woff2') format('woff2')}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-500.woff2') format('woff2')}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-600.woff2') format('woff2')}
+  /* IBM Plex Mono */
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-mono-400.woff2') format('woff2')}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/ibm-plex-mono-500.woff2') format('woff2')}
+</style>
+<!-- marca 'js' lo antes posible: sin JS (o al imprimir/exportar a PDF) el contenido queda visible por defecto -->
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --indigo:#0D1430; --indigo2:#16204A; --indigo-deep:#0B1026;
+    --gold:#C6A35B; --gold-lt:#D8B86E; --gold-dp:#7E5F1E;
+    --steel:#8FA8CE; --steel-lt:#A6BEDE;
+    --bone:#F4F1E9; --bone2:#FBF9F3;
+    --ink:#15192B; --mist:#565D6E; --mist-dk:#AEB6C7;
+    --line:#E3DDD1; --line-dk:rgba(255,255,255,.12);
+    --maxw:1080px;
+    --disp:'Space Grotesk',sans-serif;
+    --body:'IBM Plex Sans',sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:74px}
+  body{font-family:var(--body);background:var(--bone);color:var(--ink);line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+  img,svg{display:block;max-width:100%}
+
+  /* ---------- layout ---------- */
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:clamp(64px,11vw,150px) 0}
+  .sec-dark{background:var(--indigo);color:var(--bone)}
+  .sec-bone{background:var(--bone)}
+  .sec-bone2{background:var(--bone2)}
+
+  /* ---------- topbar / índice de navegación ---------- */
+  /* escala z-index: topbar 100 (sin modales ni toasts en este documento) */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;gap:16px;
+          padding:11px 24px;background:rgba(11,16,38,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+          border-bottom:1px solid var(--line-dk);
+          transform:translateY(-101%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .topbar.show{transform:none}
+  .topbar .tb-brand{display:flex;align-items:center;gap:9px;text-decoration:none;flex:none}
+  .topbar .tb-brand svg{width:24px}
+  .topbar .tb-wm{font-family:var(--disp);font-weight:600;font-size:.92rem;letter-spacing:.08em;color:var(--bone)}
+  .topbar .tb-wm em{font-style:normal;color:var(--gold-lt)}
+  .topbar .tb-nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;mask-image:linear-gradient(90deg,transparent,#000 16px,#000 calc(100% - 16px),transparent)}
+  .topbar .tb-nav::-webkit-scrollbar{display:none}
+  .topbar .tb-nav a{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+                    color:var(--steel-lt);text-decoration:none;padding:7px 11px;border-radius:8px;white-space:nowrap;
+                    transition:color .2s,background .2s}
+  .topbar .tb-nav a:hover{color:var(--bone)}
+  .topbar .tb-nav a.active{color:var(--indigo);background:var(--gold-lt)}
+  @media(max-width:720px){.topbar{padding:9px 14px;gap:10px}.topbar .tb-wm{display:none}}
+
+  /* ---------- type ---------- */
+  .eyebrow{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dp);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  .sec-dark .eyebrow{color:var(--gold-lt)}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(198,163,91,.7)}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:24px}
+  h3{font-size:clamp(1.25rem,2.4vw,1.6rem);margin-bottom:10px}
+  .lede{font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:300;max-width:62ch;color:var(--ink)}
+  .sec-dark .lede{color:#D8DCE6}
+  p{max-width:64ch}
+  .muted{color:var(--mist)}
+  .sec-dark .muted,.hero .muted{color:var(--mist-dk)}
+
+  /* ---------- hero ---------- */
+  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+        background:radial-gradient(120% 90% at 50% 8%,#1B2856 0%,var(--indigo) 42%,var(--indigo-deep) 100%);
+        color:var(--bone);position:relative;padding:90px 24px 60px;overflow:hidden}
+  .hero .eyebrow{justify-content:center;color:var(--steel-lt)}
+  .hero .eyebrow::before{background:var(--steel-lt);box-shadow:0 0 10px rgba(166,190,222,.7)}
+  .hero-mark{width:clamp(120px,20vw,180px);margin-bottom:30px}
+  .wm{font-family:var(--disp);font-weight:600;font-size:clamp(2.6rem,9vw,5.4rem);letter-spacing:.06em;line-height:1}
+  .wm .l{color:var(--gold);margin-left:.34em}
+  .tagline{font-family:var(--disp);font-weight:400;font-size:clamp(.95rem,2vw,1.35rem);letter-spacing:.01em;color:#E7E3D8;margin-top:26px;max-width:30ch}
+  .hero-sub{font-weight:300;color:#9FA8BD;max-width:46ch;margin-top:18px;font-size:clamp(.92rem,1.4vw,1.05rem)}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;color:#7C86A0;text-transform:uppercase}
+
+  /* hero mark animation */
+  .hero-mark .stroke{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 1.5s cubic-bezier(.6,.05,.2,1) forwards}
+  .hero-mark .s2{animation-delay:.18s}
+  .hero-mark .zenith{opacity:0;transform-box:fill-box;transform-origin:center;animation:ignite .7s ease 1.25s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes ignite{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+  /* ---------- reveal (enhancement-first: visible por defecto, solo se oculta con JS activo) ---------- */
+  .reveal{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .js .reveal.in{opacity:1;transform:none}
+
+  /* ---------- quote ---------- */
+  .pquote{font-family:var(--disp);font-weight:500;font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.15;letter-spacing:-.01em;max-width:18ch;margin:54px auto;text-align:center}
+  .pquote .em{color:var(--gold)}
+
+  /* ---------- grids ---------- */
+  .grid{display:grid;gap:22px}
+  .two{grid-template-columns:1fr 1fr}
+  .three{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:820px){.two,.three{grid-template-columns:1fr}}
+
+  /* unit cards */
+  .units{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:46px}
+  @media(max-width:720px){.units{grid-template-columns:1fr}}
+  .unit{border:1px solid var(--line-dk);border-radius:16px;padding:28px 26px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));transition:border-color .3s,transform .3s}
+  .unit:hover{border-color:rgba(198,163,91,.5);transform:translateY(-3px)}
+  .unit .code{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;color:var(--steel-lt);margin-bottom:14px}
+  .unit h3{color:var(--bone)}
+  .unit p{font-size:.95rem;font-weight:300;color:#AEB6C7;max-width:none}
+  .unit.span2{grid-column:1/-1}
+
+  /* ---------- isotipo block ---------- */
+  .iso-stage{display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:center}
+  .iso-stage .big{width:clamp(160px,26vw,240px);flex:none}
+  .iso-meaning{flex:1;min-width:280px}
+  .meaning-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .sec-dark .meaning-row{border-color:var(--line-dk)}
+  .swatch-dot{width:14px;height:14px;border-radius:50%;flex:none;margin-top:5px}
+  .meaning-row b{font-family:var(--disp);font-weight:600}
+  .meaning-row span{font-size:.95rem;font-weight:300}
+
+  /* ---------- logo showcase ---------- */
+  .logo-card{border:1px solid var(--line);border-radius:16px;padding:42px;display:flex;align-items:center;justify-content:center;min-height:200px}
+  .logo-card.dark{background:var(--indigo);border-color:transparent}
+  .logo-card .lk{width:min(340px,90%)}
+  .logo-card .lk.sm{width:min(220px,70%)}
+  .caption{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);margin-top:14px}
+  .sec-dark .caption{color:#8B93A6}
+
+  /* clear space */
+  .clearspace{border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;position:relative}
+  .cs-inner{border:1px dashed var(--steel);padding:clamp(28px,6vw,52px);display:flex;justify-content:center}
+  .cs-inner .lk{width:min(300px,80%)}
+  .cs-x{position:absolute;font-family:var(--mono);font-size:.78rem;color:var(--steel);font-weight:500}
+
+  /* ---------- color palette ---------- */
+  .palette{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  @media(max-width:820px){.palette{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.palette{grid-template-columns:1fr}}
+  .col{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .col .chip{height:120px}
+  .col .meta{padding:16px 18px}
+  .col .meta .nm{font-family:var(--disp);font-weight:600;font-size:1.02rem}
+  .col .meta .role{font-size:.8rem;color:var(--mist);margin-bottom:10px}
+  .col .meta .val{font-family:var(--mono);font-size:.74rem;color:var(--ink);letter-spacing:.02em;line-height:1.9}
+  .col .meta .val span{color:var(--mist)}
+
+  /* ---------- type specimen ---------- */
+  .specimen{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:26px}
+  .specimen .head{padding:24px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+  .specimen .head .fam{font-family:var(--disp);font-weight:600;font-size:1.3rem}
+  .specimen .head .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--mist);text-transform:uppercase}
+  .specimen .body{padding:24px 28px}
+  .aa{font-family:var(--disp);font-size:clamp(2.4rem,7vw,4.2rem);line-height:1;letter-spacing:-.01em}
+  .aa.plex{font-family:var(--body);font-weight:300}
+  .aa.mono{font-family:var(--mono);font-size:clamp(2rem,6vw,3.4rem)}
+  .glyphs{font-family:var(--mono);font-size:.86rem;color:var(--mist);margin-top:16px;letter-spacing:.04em}
+  .scale-row{display:flex;align-items:baseline;gap:18px;padding:10px 0;border-top:1px dashed var(--line)}
+  .scale-row .lbl{font-family:var(--mono);font-size:.7rem;color:var(--mist);width:120px;flex:none;letter-spacing:.1em}
+
+  /* ---------- submarks ---------- */
+  .subs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:42px}
+  @media(max-width:720px){.subs{grid-template-columns:1fr}}
+  .sub{border:1px solid var(--line-dk);border-radius:14px;padding:24px;display:flex;align-items:flex-start;gap:16px}
+  .sub .m{width:38px;flex:none;margin-top:2px}
+  .sub .txt{flex:1}
+  .sub .txt .lab{font-family:var(--disp);font-weight:600;font-size:1.12rem;color:var(--bone)}
+  .sub .txt .lab em{font-style:normal;color:var(--gold-lt)}
+  .sub .txt .desc{font-size:.85rem;color:var(--mist-dk);line-height:1.5;margin-top:6px}
+  .sub .txt .cd{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--steel-lt);
+                margin-top:11px;display:inline-block;border:1px solid var(--line-dk);border-radius:6px;padding:3px 8px}
+  .sub.core{border-color:rgba(198,163,91,.42);background:rgba(198,163,91,.05)}
+  .sub.span2{grid-column:1/-1}
+  .sub .tag{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;
+            color:var(--indigo);background:var(--gold-lt);border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:middle}
+
+  /* ---------- usos: así sí / así no (visual) ---------- */
+  .use-label{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+             margin:40px 0 16px;display:flex;align-items:center;gap:10px}
+  .use-label.si{color:#3E7A4B}
+  .use-label.no{color:#B4503F}
+  .use-label::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+  .oks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .donts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.donts{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.donts,.oks{grid-template-columns:1fr}}
+  .ucard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+  .demo{height:132px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .demo.bg-bone{background:var(--bone)}
+  .demo.bg-indigo{background:var(--indigo)}
+  .demo svg{width:58px;height:58px}
+  .demo .badge{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;display:flex;
+               align-items:center;justify-content:center;font-family:var(--disp);font-weight:600;font-size:.86rem;z-index:2}
+  .badge.no{background:#F3E3E0;color:#B4503F}
+  .badge.yes{background:#DCEAD8;color:#3E7A4B}
+  .ucap{padding:13px 16px;border-top:1px solid var(--line)}
+  .ucap h3{font-size:.98rem}
+  .ucap p{font-size:.83rem;font-weight:300;color:var(--mist);max-width:none;margin-top:2px}
+  /* transformaciones de error (solo demostración) */
+  .d-stretch{transform:scaleX(1.75)}
+  .d-recolor{filter:hue-rotate(115deg) saturate(2)}
+  .d-rotate{transform:rotate(26deg)}
+  .d-shadow{filter:drop-shadow(3px 5px 3px rgba(0,0,0,.55))}
+  .demo.tight svg{width:120px;height:120px}
+  .demo.tight{outline:2px dashed #C9A9A2;outline-offset:-8px}
+  .demo.noise{background:repeating-linear-gradient(45deg,#7a9b4a,#7a9b4a 9px,#4a7a9b 9px,#4a7a9b 18px)}
+
+  /* ---------- voice ---------- */
+  .voice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 50px;margin-top:44px}
+  @media(max-width:720px){.voice-grid{grid-template-columns:1fr}}
+  .vrow .vt{font-family:var(--disp);font-weight:600;font-size:1.15rem;color:var(--bone);margin-bottom:6px}
+  .vrow .vt .neg{color:var(--mist);font-weight:400}
+  .vrow p{font-size:.95rem;font-weight:300;color:#AEB6C7;max-width:none}
+
+  /* ---------- applications ---------- */
+  .apps{display:grid;grid-template-columns:1fr 1.4fr;gap:22px;margin-top:44px}
+  @media(max-width:820px){.apps{grid-template-columns:1fr}}
+  .app-icon-box{border-radius:16px;background:var(--bone2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:46px}
+  .app-icon-box svg{width:140px;border-radius:32px;box-shadow:0 24px 50px -18px rgba(13,20,48,.55)}
+  /* más aplicaciones */
+  .app-more{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+  @media(max-width:820px){.app-more{grid-template-columns:1fr}}
+  .mock{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .mock .mcap{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);padding:11px 15px;border-top:1px solid var(--line)}
+  .mock .body{flex:1}
+  /* firma de correo */
+  .sig{padding:24px 24px;min-height:190px;display:flex;flex-direction:column;justify-content:center}
+  .sig .sl{width:150px;margin-bottom:15px}
+  .sig .sn{font-family:var(--disp);font-weight:600;font-size:1.08rem;color:var(--ink)}
+  .sig .sr{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dp);margin-top:4px}
+  .sig .sd{height:1px;background:var(--line);margin:14px 0}
+  .sig .sm{font-size:.8rem;color:var(--mist);line-height:1.75}
+  .sig .sm b{color:var(--ink);font-weight:500}
+  /* banner de redes */
+  .banner{background:linear-gradient(135deg,var(--indigo2),var(--indigo-deep));min-height:190px;display:flex;
+          flex-direction:column;align-items:center;justify-content:center;gap:13px;padding:26px;text-align:center}
+  .banner svg{width:52px}
+  .banner .bw{font-family:var(--disp);font-weight:600;font-size:1.35rem;letter-spacing:.06em;color:var(--bone)}
+  .banner .bw em{font-style:normal;color:var(--gold-lt)}
+  .banner .bt{font-family:var(--mono);font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel-lt)}
+  /* pestaña de navegador */
+  .brw{min-height:190px}
+  .brw .bar{background:#e7e2d6;display:flex;align-items:flex-end;gap:6px;padding:12px 12px 0}
+  .brw .tab{background:#fff;border-radius:9px 9px 0 0;padding:9px 13px;display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--ink)}
+  .brw .tab svg{width:16px;height:16px;border-radius:4px}
+  .brw .url{padding:11px 14px;font-family:var(--mono);font-size:.72rem;color:var(--mist);border-bottom:1px solid var(--line)}
+  .brw .url b{color:var(--ink);font-weight:500}
+  .brw .pg{background:var(--indigo);flex:1;min-height:86px;display:flex;align-items:center;justify-content:center}
+  .brw .pg svg{width:38px}
+  .card-mock{border-radius:16px;background:linear-gradient(135deg,var(--indigo2),var(--indigo-deep));color:var(--bone);padding:38px;display:flex;flex-direction:column;justify-content:space-between;min-height:230px}
+  .card-mock .top{display:flex;align-items:center;gap:14px}
+  .card-mock .top svg{width:42px}
+  .card-mock .top .nm{font-family:var(--disp);font-weight:600;letter-spacing:.08em}
+  .card-mock .top .nm em{font-style:normal;color:var(--gold)}
+  .card-mock .who .n{font-family:var(--disp);font-weight:600;font-size:1.15rem}
+  .card-mock .who .r{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;color:var(--steel-lt);text-transform:uppercase;margin-top:4px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--indigo-deep);color:#8B93A6;padding:64px 0 56px;text-align:center}
+  footer .fmark{width:54px;margin:0 auto 22px}
+  footer .fw{font-family:var(--disp);font-weight:600;letter-spacing:.1em;color:var(--bone);font-size:1.1rem}
+  footer .fw em{font-style:normal;color:var(--gold)}
+  footer .fmeta{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-top:16px}
+  footer .fcopy{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel-lt);margin-top:30px}
+  footer .fdisc{max-width:640px;margin:14px auto 0;font-size:.75rem;line-height:1.7;color:#6B7385}
+  footer .fdisc a{color:var(--steel-lt);text-decoration:none;border-bottom:1px solid rgba(166,190,222,.3)}
+
+  .divider{height:1px;background:var(--line);max-width:var(--maxw);margin:0 auto}
+  .stack-gap>*+*{margin-top:18px}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important}
+    .hero-mark .stroke{stroke-dashoffset:0}
+    .hero-mark .zenith{opacity:1;transform:none}
+    .js .reveal{opacity:1;transform:none}
+  }
+
+  /* impresión / exportación a PDF: todo visible, sin animación, sin barra flotante */
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .js .reveal,.reveal{opacity:1!important;transform:none!important}
+    .hero-mark .stroke{stroke-dashoffset:0}
+    .hero-mark .zenith{opacity:1}
+    .topbar,.scroll-cue,.menu-fab,.search-overlay,#descargas{display:none!important}
+    /* paginación limpia: cada sección en página nueva, sin cortar bloques */
+    section{break-before:page;page-break-before:always;padding:52px 0!important}
+    .hero{break-before:avoid;page-break-before:avoid}
+    h2,.eyebrow,.lede{break-after:avoid;page-break-after:avoid}
+    .unit,.col,.logo-card,.clearspace,.meaning-row,.iso-stage,.scale-row,.specimen,
+    .sub,.ucard,.vrow,.mock,.card-mock,.app-icon-box{
+      break-inside:avoid;page-break-inside:avoid}
+  }
+
+  /* ---------- menú hamburguesa + buscador ---------- */
+  .menu-fab{position:fixed;top:16px;right:16px;z-index:120;width:46px;height:46px;display:flex;
+            align-items:center;justify-content:center;gap:0;flex-direction:column;
+            background:rgba(11,16,38,.72);border:1px solid var(--line-dk);border-radius:12px;
+            backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);cursor:pointer;
+            transition:background .2s,border-color .2s,transform .2s}
+  .menu-fab:hover{background:rgba(11,16,38,.92);border-color:var(--gold)}
+  .menu-fab span{display:block;width:20px;height:2px;border-radius:2px;background:var(--bone);
+                 transition:transform .25s,opacity .2s;margin:2.5px 0}
+  .menu-fab[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+  .menu-fab[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-fab[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+  .topbar.show ~ .menu-fab, .menu-fab.compact{top:11px}
+
+  .search-overlay{position:fixed;inset:0;z-index:130;display:flex;justify-content:center;
+                  align-items:flex-start;padding:clamp(56px,12vh,120px) 20px 40px;
+                  background:rgba(9,13,30,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+                  opacity:0;pointer-events:none;transition:opacity .28s}
+  .search-overlay.open{opacity:1;pointer-events:auto}
+  .search-panel{width:100%;max-width:640px;background:linear-gradient(180deg,#141d3f,#0d1430);
+                border:1px solid var(--line-dk);border-radius:18px;overflow:hidden;
+                box-shadow:0 30px 90px rgba(0,0,0,.55);transform:translateY(-14px) scale(.98);
+                transition:transform .28s;display:flex;flex-direction:column;max-height:82vh}
+  .search-overlay.open .search-panel{transform:none}
+  .search-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line-dk)}
+  .search-head svg{width:19px;height:19px;flex:none;stroke:var(--steel-lt);fill:none;stroke-width:2}
+  .search-input{flex:1;background:none;border:0;outline:none;color:var(--bone);
+                font-family:var(--body);font-size:1.05rem;font-weight:300}
+  .search-input::placeholder{color:var(--mist-dk)}
+  .search-kbd{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--mist-dk);
+              border:1px solid var(--line-dk);border-radius:6px;padding:3px 6px;flex:none}
+  .search-results{overflow-y:auto;padding:8px;scrollbar-width:thin}
+  .search-results a{display:block;text-decoration:none;padding:12px 14px;border-radius:11px;
+                    transition:background .15s}
+  .search-results a:hover,.search-results a.hl{background:rgba(214,184,110,.13)}
+  .sr-kicker{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.18em;
+             text-transform:uppercase;color:var(--gold-lt);margin-bottom:3px}
+  .sr-title{font-family:var(--disp);font-weight:500;font-size:1rem;color:var(--bone);margin-bottom:2px}
+  .sr-snippet{font-size:.82rem;color:var(--mist-dk);line-height:1.45;
+              display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .search-results mark{background:rgba(214,184,110,.28);color:var(--gold-lt);border-radius:3px;padding:0 1px}
+  .search-empty{padding:26px 16px;text-align:center;color:var(--mist-dk);font-size:.9rem}
+  .search-foot{padding:9px 16px;border-top:1px solid var(--line-dk);display:flex;gap:16px;
+               font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:var(--mist-dk);flex-wrap:wrap}
+  .search-foot b{color:var(--steel-lt);font-weight:500}
+  @media(max-width:520px){.search-kbd{display:none}}
+
+  /* ---------- descargas ---------- */
+  .dl-featured{display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+               background:linear-gradient(135deg,#16204A,#0B1026);border:1px solid var(--line-dk);
+               border-radius:18px;padding:28px 30px;margin-bottom:26px}
+  .dl-featured .df-mark{width:64px;flex:none}
+  .dl-featured .df-txt{flex:1;min-width:220px}
+  .dl-featured h3{font-family:var(--disp);font-weight:600;color:var(--bone);font-size:1.3rem;margin-bottom:4px}
+  .dl-featured p{color:var(--mist-dk);font-size:.92rem;margin:0}
+  .dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+  .dl-card{display:flex;flex-direction:column;background:var(--bone2);border:1px solid var(--line);
+           border-radius:14px;overflow:hidden;text-decoration:none;transition:border-color .2s,transform .2s,box-shadow .2s}
+  .dl-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 12px 30px rgba(13,20,48,.1)}
+  .dl-prev{height:118px;display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
+  .dl-prev.light{background:var(--bone)}
+  .dl-prev.dark{background:var(--indigo)}
+  .dl-prev.chk{background:var(--bone);
+     background-image:linear-gradient(45deg,#e9e4d8 25%,transparent 25%),linear-gradient(-45deg,#e9e4d8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e9e4d8 75%),linear-gradient(-45deg,transparent 75%,#e9e4d8 75%);
+     background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}
+  .dl-prev svg{max-height:76px;max-width:82%;width:auto}
+  .dl-prev .fmtbig{font-family:var(--mono);font-weight:500;font-size:1.5rem;letter-spacing:.08em;color:var(--gold-lt)}
+  .dl-card .dl-body{padding:15px 17px 16px;display:flex;flex-direction:column;gap:3px;border-top:1px solid var(--line)}
+  .dl-card .dl-fmt{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.18em;
+                   text-transform:uppercase;color:var(--gold-dp)}
+  .dl-card .dl-name{font-family:var(--disp);font-weight:500;font-size:1.02rem;color:var(--ink)}
+  .dl-card .dl-desc{font-size:.8rem;color:var(--mist);line-height:1.45;margin-top:2px}
+  .dl-card .dl-go{margin-top:11px;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;
+                  text-transform:uppercase;color:var(--gold-dp);display:flex;align-items:center;gap:6px}
+  .dl-card .dl-go::after{content:"↓";font-size:.85rem}
+  .btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--indigo);
+            font-family:var(--body);font-weight:500;font-size:.92rem;text-decoration:none;
+            padding:12px 22px;border-radius:11px;transition:background .2s,transform .2s;white-space:nowrap}
+  .btn-gold:hover{background:var(--gold-lt);transform:translateY(-1px)}
+</style>
+</head>
+<body>
+
+<!-- shared SVG defs + reusable mark symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="z" x1="52" y1="20" x2="68" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#D8B86E"/><stop offset="1" stop-color="#A6BEDE"/></linearGradient>
+    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#C6A35B" stop-opacity="0.4"/><stop offset="1" stop-color="#C6A35B" stop-opacity="0"/></radialGradient>
+    <symbol id="mark" viewBox="0 0 120 120">
+      <circle cx="60" cy="20" r="18" fill="url(#g)"/>
+      <path d="M28 98 C 33 54, 50 30, 60 22" stroke="#C6A35B" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+      <path d="M92 98 C 87 54, 70 30, 60 22" stroke="#8FA8CE" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+      <circle cx="60" cy="20" r="10.5" stroke="#C6A35B" stroke-width="1.4" opacity="0.4" fill="none"/>
+      <circle cx="60" cy="20" r="6" fill="url(#z)"/>
+      <circle cx="58" cy="18" r="1.8" fill="#FBF6EA" opacity="0.9"/>
+    </symbol>
+    <symbol id="mark-rev" viewBox="0 0 120 120">
+      <circle cx="60" cy="20" r="18" fill="url(#g)"/>
+      <path d="M28 98 C 33 54, 50 30, 60 22" stroke="#D8B86E" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+      <path d="M92 98 C 87 54, 70 30, 60 22" stroke="#A6BEDE" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+      <circle cx="60" cy="20" r="10.5" stroke="#D8B86E" stroke-width="1.4" opacity="0.45" fill="none"/>
+      <circle cx="60" cy="20" r="6" fill="url(#z)"/>
+      <circle cx="58" cy="18" r="1.8" fill="#FBF6EA" opacity="0.95"/>
+    </symbol>
+    <symbol id="mark-mono" viewBox="0 0 120 120">
+      <path d="M28 98 C 33 54, 50 30, 60 22" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+      <path d="M92 98 C 87 54, 70 30, 60 22" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+      <circle cx="60" cy="20" r="10.5" stroke="currentColor" stroke-width="1.4" opacity="0.35" fill="none"/>
+      <circle cx="60" cy="20" r="6" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ TOPBAR / ÍNDICE ============ -->
+<nav class="topbar" id="topbar" aria-label="Índice del manual">
+  <a class="tb-brand" href="#top" aria-label="Volver al inicio">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><use href="#mark-rev"/></svg>
+    <span class="tb-wm">CENIT<em>LAB</em></span>
+  </a>
+  <div class="tb-nav">
+    <a href="#proposito">01 Propósito</a>
+    <a href="#disciplina">02 Disciplina</a>
+    <a href="#isotipo">03 Isotipo</a>
+    <a href="#logotipo">04 Logotipo</a>
+    <a href="#variaciones">05 Variaciones</a>
+    <a href="#color">06 Color</a>
+    <a href="#tipografia">07 Tipografía</a>
+    <a href="#submarcas">08 Sub-marcas</a>
+    <a href="#usos">09 Usos</a>
+    <a href="#voz">10 Voz</a>
+    <a href="#aplicaciones">11 Aplicaciones</a>
+    <a href="#descargas">12 Descargas</a>
+  </div>
+</nav>
+
+<!-- ============ MENÚ HAMBURGUESA + BUSCADOR ============ -->
+<button class="menu-fab" id="menuFab" aria-label="Buscar en el manual" aria-controls="searchOverlay" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Buscar en el manual">
+  <div class="search-panel">
+    <div class="search-head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+      <input class="search-input" id="searchInput" type="search" placeholder="Buscar: color, isotipo, tipografía, protección…" autocomplete="off" spellcheck="false" aria-label="Buscar">
+      <span class="search-kbd">ESC</span>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+    <div class="search-foot">
+      <span><b>↑ ↓</b> navegar</span><span><b>↵</b> ir</span><span><b>Esc</b> cerrar</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 00 HERO ============ -->
+<header class="hero" id="top">
+  <div class="eyebrow">Manual de marca · v1.0 · 2026</div>
+  <svg class="hero-mark" viewBox="0 0 120 120" fill="none" aria-label="Cenit Lab">
+    <circle class="zenith" cx="60" cy="20" r="18" fill="url(#g)"/>
+    <path class="stroke s1" d="M28 98 C 33 54, 50 30, 60 22" stroke="#D8B86E" stroke-width="7.5" stroke-linecap="round" pathLength="100"/>
+    <path class="stroke s2" d="M92 98 C 87 54, 70 30, 60 22" stroke="#A6BEDE" stroke-width="7.5" stroke-linecap="round" pathLength="100"/>
+    <g class="zenith">
+      <circle cx="60" cy="20" r="10.5" stroke="#D8B86E" stroke-width="1.4" opacity="0.45" fill="none"/>
+      <circle cx="60" cy="20" r="6" fill="url(#z)"/>
+      <circle cx="58" cy="18" r="1.8" fill="#FBF6EA" opacity="0.95"/>
+    </g>
+  </svg>
+  <div class="wm">CENIT<span class="l">LAB</span></div>
+  <div class="tagline">Designing the Future of Human–Machine Collaboration.</div>
+  <p class="hero-sub">La capa de inteligencia sobre la cual operarán las empresas y las personas del futuro.</p>
+  <div class="scroll-cue">Scroll ↓</div>
+</header>
+
+<!-- ============ 01 PROPÓSITO ============ -->
+<section class="sec-dark" id="proposito">
+  <div class="wrap">
+    <div class="eyebrow reveal">01 · Propósito</div>
+    <h2 class="reveal">No diseñamos una app.<br>Diseñamos la integración.</h2>
+    <p class="lede reveal">Creemos que la próxima plataforma tecnológica no será una aplicación ni un dispositivo. Será la integración continua entre inteligencia humana e inteligencia artificial.</p>
+    <p class="lede reveal" style="margin-top:22px">Conectamos conocimiento, contexto y capacidad computacional para crear organizaciones más adaptativas, más rápidas y más inteligentes.</p>
+    <div class="pquote reveal">El lujo real es vivir <span class="em">sin fricción.</span></div>
+    <div class="grid two reveal" style="margin-top:30px">
+      <p class="muted">Trabajamos como un cisne: en la superficie, una experiencia serena y sin esfuerzo. Debajo del agua, una capa de IA y machine learning operando 24/7, invisible, para que todo simplemente funcione.</p>
+      <p class="muted">Esa dualidad (calma humana arriba, inteligencia de máquina abajo) es el principio que ordena cada decisión de marca, producto y experiencia en Cenit Lab.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 DISCIPLINA / UNIDADES ============ -->
+<section class="sec-bone" id="disciplina">
+  <div class="wrap">
+    <div class="eyebrow reveal">02 · Disciplina</div>
+    <h2 class="reveal">Un estudio de ingeniería tecnológica.</h2>
+    <p class="lede reveal">Dos capacidades —una digital y una física— más el brazo de inversión y alianzas. Todo bajo una sola capa de inteligencia.</p>
+  </div>
+  <div class="wrap"><div class="units">
+    <div class="unit reveal" style="background:linear-gradient(180deg,rgba(13,20,48,.04),transparent);border-color:var(--line)">
+      <div class="code" style="color:var(--gold-dp)">CAPA DIGITAL</div>
+      <h3 style="color:var(--ink)">Cenit Lab AI</h3>
+      <p style="color:var(--mist)">IA, LLMs, machine learning, data &amp; analytics, software y apps. La capa que <b>entiende y decide</b>.</p>
+    </div>
+    <div class="unit reveal" style="background:linear-gradient(180deg,rgba(13,20,48,.04),transparent);border-color:var(--line)">
+      <div class="code" style="color:var(--gold-dp)">CAPA FÍSICA</div>
+      <h3 style="color:var(--ink)">Cenit Lab IoT</h3>
+      <p style="color:var(--mist)">Sensores, domótica, hardware e interfaces físicas. La capa que <b>captura el mundo real y actúa</b> sobre él.</p>
+    </div>
+    <div class="unit span2 reveal" style="background:linear-gradient(180deg,rgba(13,20,48,.04),transparent);border-color:var(--line)">
+      <div class="code" style="color:var(--gold-dp)">CAPITAL Y ALIANZAS</div>
+      <h3 style="color:var(--ink)">Cenit Lab Ventures</h3>
+      <p style="color:var(--mist)">Venture capital, alianzas con empresas y socios estratégicos. El brazo con que Cenit Lab <b>invierte y co-construye negocios</b>.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ 03 ISOTIPO ============ -->
+<section class="sec-dark" id="isotipo">
+  <div class="wrap">
+    <div class="eyebrow reveal">03 · El isotipo</div>
+    <h2 class="reveal">El punto cenit.</h2>
+    <p class="lede reveal" style="margin-bottom:50px">Dos trazos ascienden y se funden en un único punto de luz. Es la metáfora exacta de la marca: dos inteligencias que convergen en su punto más alto.</p>
+    <div class="iso-stage reveal">
+      <svg class="big" viewBox="0 0 120 120"><use href="#mark-rev"/></svg>
+      <div class="iso-meaning">
+        <div class="meaning-row"><span class="swatch-dot" style="background:var(--gold)"></span><div><b>Trazo cálido: lo humano.</b><br><span class="muted">Intuición, criterio, contexto. La inteligencia que aporta la persona.</span></div></div>
+        <div class="meaning-row"><span class="swatch-dot" style="background:var(--steel)"></span><div><b>Trazo frío: la máquina.</b><br><span class="muted">Cómputo, escala, velocidad. La inteligencia que aporta la IA.</span></div></div>
+        <div class="meaning-row"><span class="swatch-dot" style="background:linear-gradient(90deg,var(--gold),var(--steel))"></span><div><b>El punto cenit: la fusión.</b><br><span class="muted">Donde ambas se encuentran nace una nueva capacidad: el punto más alto.</span></div></div>
+        <div class="meaning-row" style="border:none"><span class="swatch-dot" style="background:var(--bone)"></span><div><b>La curva: sin fricción.</b><br><span class="muted">Trazos suaves, sin aristas. La elegancia serena del cisne.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 LOGOTIPO ============ -->
+<section class="sec-bone" id="logotipo">
+  <div class="wrap">
+    <div class="eyebrow reveal">04 · El logotipo</div>
+    <h2 class="reveal">Construcción y bloqueos.</h2>
+    <p class="lede reveal">Dos bloqueos oficiales. El horizontal es la versión primaria; el vertical se usa cuando el espacio es cuadrado o reducido.</p>
+    <div class="grid two reveal" style="margin-top:46px">
+      <div>
+        <div class="logo-card">
+          <svg class="lk" viewBox="0 0 560 170"><use href="#logo-h"/></svg>
+        </div>
+        <div class="caption">Bloqueo horizontal · primario</div>
+      </div>
+      <div>
+        <div class="logo-card">
+          <svg class="lk sm" viewBox="0 0 420 320"><use href="#logo-v"/></svg>
+        </div>
+        <div class="caption">Bloqueo vertical · secundario</div>
+      </div>
+    </div>
+
+    <div style="margin-top:60px" class="reveal">
+      <h3>Área de protección y tamaño mínimo</h3>
+      <p class="muted" style="margin-bottom:24px">El espacio libre alrededor del logo equivale a <b>x</b> = el diámetro del punto cenit. Nunca invadir esa zona con texto ni gráficos. Tamaño mínimo: 120 px de ancho en digital / 28 mm en impreso.</p>
+      <div class="clearspace">
+        <span class="cs-x" style="top:8px;left:50%">x</span>
+        <span class="cs-x" style="bottom:8px;left:50%">x</span>
+        <span class="cs-x" style="left:8px;top:50%">x</span>
+        <span class="cs-x" style="right:8px;top:50%">x</span>
+        <div class="cs-inner"><svg class="lk" viewBox="0 0 560 170"><use href="#logo-h"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 VARIACIONES ============ -->
+<section class="sec-bone2" id="variaciones">
+  <div class="wrap">
+    <div class="eyebrow reveal">05 · Variaciones</div>
+    <h2 class="reveal">Una marca, varios fondos.</h2>
+    <p class="lede reveal">Color como versión preferida. Monocromo para impresión a un tinte, grabados o contextos restringidos.</p>
+    <div class="grid two reveal" style="margin-top:46px">
+      <div><div class="logo-card"><svg class="lk" viewBox="0 0 560 170"><use href="#logo-h"/></svg></div><div class="caption">A todo color · fondo claro</div></div>
+      <div><div class="logo-card dark"><svg class="lk" viewBox="0 0 560 170"><use href="#logo-h-rev"/></svg></div><div class="caption">Invertido · fondo oscuro</div></div>
+      <div><div class="logo-card" style="color:var(--indigo)"><svg class="lk" viewBox="0 0 560 170"><use href="#logo-h-mono"/></svg></div><div class="caption">Monocromo tinta</div></div>
+      <div><div class="logo-card dark" style="color:var(--gold)"><svg class="lk" viewBox="0 0 560 170"><use href="#logo-h-mono"/></svg></div><div class="caption">Monocromo oro · fondo oscuro</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 COLOR ============ -->
+<section class="sec-bone" id="color">
+  <div class="wrap">
+    <div class="eyebrow reveal">06 · Color</div>
+    <h2 class="reveal">Cielo, oro y luz fría.</h2>
+    <p class="lede reveal">El índigo es el cielo nocturno donde existe el cenit. El oro es lo humano y el lujo; el azul estelar es la máquina. Juntos, en su punto de encuentro, producen luz.</p>
+    <div class="palette">
+      <div class="col reveal"><div class="chip" style="background:#0D1430"></div><div class="meta"><div class="nm">Índigo Cenit</div><div class="role">Primario · superficies, texto</div><div class="val">HEX <span>#0D1430</span><br>RGB <span>13 · 20 · 48</span></div></div></div>
+      <div class="col reveal"><div class="chip" style="background:#C6A35B"></div><div class="meta"><div class="nm">Oro Cenit</div><div class="role">Acento cálido · lo humano</div><div class="val">HEX <span>#C6A35B</span><br>RGB <span>198 · 163 · 91</span></div></div></div>
+      <div class="col reveal"><div class="chip" style="background:#8FA8CE"></div><div class="meta"><div class="nm">Azul Estelar</div><div class="role">Acento frío · la máquina</div><div class="val">HEX <span>#8FA8CE</span><br>RGB <span>143 · 168 · 206</span></div></div></div>
+      <div class="col reveal"><div class="chip" style="background:#F4F1E9"></div><div class="meta"><div class="nm">Hueso</div><div class="role">Fondo claro · texto invertido</div><div class="val">HEX <span>#F4F1E9</span><br>RGB <span>244 · 241 · 233</span></div></div></div>
+      <div class="col reveal"><div class="chip" style="background:#16204A"></div><div class="meta"><div class="nm">Índigo Profundo</div><div class="role">Degradados · profundidad</div><div class="val">HEX <span>#16204A</span><br>RGB <span>22 · 32 · 74</span></div></div></div>
+      <div class="col reveal"><div class="chip" style="background:#6B7385"></div><div class="meta"><div class="nm">Niebla</div><div class="role">Texto secundario</div><div class="val">HEX <span>#6B7385</span><br>RGB <span>107 · 115 · 133</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 TIPOGRAFÍA ============ -->
+<section class="sec-bone2" id="tipografia">
+  <div class="wrap">
+    <div class="eyebrow reveal">07 · Tipografía</div>
+    <h2 class="reveal">Geometría y propósito.</h2>
+    <p class="lede reveal"><b>Space Grotesk</b> da el rostro futuro y geométrico de la marca. <b>IBM Plex</b> sostiene todo lo demás. La elegimos a propósito: fue diseñada para expresar la relación entre el ser humano y la máquina. La narrativa de Cenit Lab, en el propio tipo.</p>
+
+    <div class="specimen reveal">
+      <div class="head"><span class="fam">Space Grotesk</span><span class="tag">Display · titulares · logotipo</span></div>
+      <div class="body"><div class="aa">Aa Cenit</div><div class="glyphs">A B C D E G K Q R · a b c d e g · 0 1 2 3 4 5 6 7 8 9 · &amp; @ %</div>
+        <div class="scale-row"><span class="lbl">DISPLAY · 600</span><span style="font-family:var(--disp);font-weight:600;font-size:1.8rem">El punto más alto</span></div>
+        <div class="scale-row"><span class="lbl">TÍTULO · 600</span><span style="font-family:var(--disp);font-weight:600;font-size:1.25rem">Capa de inteligencia</span></div>
+      </div>
+    </div>
+
+    <div class="specimen reveal">
+      <div class="head"><span class="fam" style="font-family:var(--body);font-weight:600">IBM Plex Sans</span><span class="tag">Cuerpo · interfaz · lectura</span></div>
+      <div class="body"><div class="aa plex">Aa Humano</div>
+        <div class="scale-row"><span class="lbl">CUERPO · 300</span><span style="font-family:var(--body);font-weight:300;font-size:1.05rem">Inteligencia humana y artificial, sin fricción.</span></div>
+        <div class="scale-row"><span class="lbl">DESTACADO · 500</span><span style="font-family:var(--body);font-weight:500;font-size:1.05rem">Más adaptativos. Más rápidos. Más inteligentes.</span></div>
+      </div>
+    </div>
+
+    <div class="specimen reveal">
+      <div class="head"><span class="fam mono" style="font-size:1.3rem">IBM Plex Mono</span><span class="tag">Datos · etiquetas · código</span></div>
+      <div class="body"><div class="aa mono">Aa 01</div>
+        <div class="scale-row"><span class="lbl">ETIQUETA</span><span style="font-family:var(--mono);font-size:.95rem;letter-spacing:.18em">CENIT LAB · AI · IOT · VENTURES</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 SUB-MARCAS ============ -->
+<section class="sec-dark" id="submarcas">
+  <div class="wrap">
+    <div class="eyebrow reveal">08 · Sub-marcas</div>
+    <h2 class="reveal">El sistema de unidades.</h2>
+    <p class="lede reveal">El estudio se organiza en tres unidades. Todas se escriben igual —<b>“Cenit Lab”</b> + el nombre de la unidad en oro— y comparten el mismo isotipo.</p>
+    <div class="subs">
+      <div class="sub reveal"><svg class="m" viewBox="0 0 120 120"><use href="#mark-rev"/></svg><div class="txt">
+        <div class="lab">Cenit Lab <em>AI</em></div>
+        <div class="desc">La capa digital: IA, LLMs, machine learning, data &amp; analytics, software y apps. Entiende y decide.</div></div></div>
+      <div class="sub reveal"><svg class="m" viewBox="0 0 120 120"><use href="#mark-rev"/></svg><div class="txt">
+        <div class="lab">Cenit Lab <em>IoT</em></div>
+        <div class="desc">La capa física: sensores, domótica, hardware e interfaces. Captura el mundo real y actúa sobre él.</div></div></div>
+      <div class="sub span2 reveal"><svg class="m" viewBox="0 0 120 120"><use href="#mark-rev"/></svg><div class="txt">
+        <div class="lab">Cenit Lab <em>Ventures</em></div>
+        <div class="desc">Venture capital, alianzas con empresas y socios estratégicos. El brazo con que Cenit Lab invierte y co-construye negocios.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 USOS INCORRECTOS ============ -->
+<section class="sec-bone" id="usos">
+  <div class="wrap">
+    <div class="eyebrow reveal">09 · Usos</div>
+    <h2 class="reveal">Así sí. Así no.</h2>
+    <p class="lede reveal">La consistencia es la marca. A la izquierda, cómo se usa bien; abajo, lo que nunca hacemos.</p>
+
+    <div class="use-label si reveal">Así sí</div>
+    <div class="oks">
+      <div class="ucard reveal">
+        <div class="demo bg-bone"><span class="badge yes">✓</span><svg viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>Isotipo a color sobre fondo claro</h3><p>Con aire suficiente alrededor y a tamaño legible.</p></div>
+      </div>
+      <div class="ucard reveal">
+        <div class="demo bg-indigo"><span class="badge yes">✓</span><svg viewBox="0 0 120 120"><use href="#mark-rev"/></svg></div>
+        <div class="ucap"><h3>Versión invertida sobre fondo oscuro</h3><p>Sobre índigo o una caja de color sólido de la paleta.</p></div>
+      </div>
+    </div>
+
+    <div class="use-label no reveal">Así no</div>
+    <div class="donts">
+      <div class="ucard reveal">
+        <div class="demo bg-bone"><span class="badge no">✕</span><svg class="d-stretch" viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>No deformar</h3><p>Nunca estirar, comprimir ni cambiar la proporción.</p></div>
+      </div>
+      <div class="ucard reveal">
+        <div class="demo bg-bone"><span class="badge no">✕</span><svg class="d-recolor" viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>No recolorear</h3><p>Solo las versiones definidas. Nada de colores fuera de paleta.</p></div>
+      </div>
+      <div class="ucard reveal">
+        <div class="demo bg-bone"><span class="badge no">✕</span><svg class="d-rotate" viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>No rotar</h3><p>El cenit va arriba. El punto de luz nunca gira ni se inclina.</p></div>
+      </div>
+      <div class="ucard reveal">
+        <div class="demo bg-bone"><span class="badge no">✕</span><svg class="d-shadow" viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>No agregar efectos</h3><p>Sin sombras duras, contornos ni relieves. El único brillo es el cenit.</p></div>
+      </div>
+      <div class="ucard reveal">
+        <div class="demo bg-bone tight"><span class="badge no">✕</span><svg viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>No invadir el aire</h3><p>Respetar el área de protección de x alrededor del logo.</p></div>
+      </div>
+      <div class="ucard reveal">
+        <div class="demo noise"><span class="badge no">✕</span><svg viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="ucap"><h3>No sobre fondos ruidosos</h3><p>Evitar fotos saturadas. Usar la versión invertida o una caja sólida.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 VOZ ============ -->
+<section class="sec-dark" id="voz">
+  <div class="wrap">
+    <div class="eyebrow reveal">10 · Tono de voz</div>
+    <h2 class="reveal">Hablamos sin fricción.</h2>
+    <p class="lede reveal">Claros, confiados y humanos. Explicamos lo complejo en simple, sin perder la altura. Tecnología que se siente serena.</p>
+    <div class="voice-grid">
+      <div class="vrow reveal"><div class="vt">Claro <span class="neg">· no técnico de más</span></div><p>El usuario gestiona resultados, no “configura webhooks”. Nombramos las cosas por lo que la persona reconoce.</p></div>
+      <div class="vrow reveal"><div class="vt">Confiado <span class="neg">· no arrogante</span></div><p>Afirmamos con criterio. No prometemos magia: mostramos el punto más alto y cómo se llega a él.</p></div>
+      <div class="vrow reveal"><div class="vt">Humano <span class="neg">· no frío</span></div><p>Hay una persona detrás de cada decisión. La IA sirve a la calma humana, no al revés.</p></div>
+      <div class="vrow reveal"><div class="vt">Preciso <span class="neg">· no vago</span></div><p>Ser específico siempre vence a ser ingenioso. Cada palabra hace exactamente un trabajo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APLICACIONES ============ -->
+<section class="sec-bone2" id="aplicaciones">
+  <div class="wrap">
+    <div class="eyebrow reveal">11 · Aplicaciones</div>
+    <h2 class="reveal">La marca en uso.</h2>
+    <div class="apps">
+      <div class="app-icon-box reveal">
+        <svg viewBox="0 0 220 220"><use href="#app-icon"/></svg>
+      </div>
+      <div class="card-mock reveal">
+        <div class="top"><svg viewBox="0 0 120 120"><use href="#mark-rev"/></svg><div class="nm">CENIT<em>LAB</em></div></div>
+        <div class="who"><div class="n">Eduardo Varas</div><div class="r">Founder</div></div>
+      </div>
+    </div>
+
+    <div class="app-more">
+      <div class="mock reveal">
+        <div class="body sig">
+          <svg class="sl" viewBox="0 0 560 170"><use href="#logo-h"/></svg>
+          <div class="sn">Eduardo Varas</div>
+          <div class="sr">Founder</div>
+          <div class="sd"></div>
+          <div class="sm"><b>evaras@cenitlab.cl</b><br>cenitlab.cl · Santiago, Chile</div>
+        </div>
+        <div class="mcap">Firma de correo</div>
+      </div>
+
+      <div class="mock reveal">
+        <div class="body banner">
+          <svg viewBox="0 0 120 120"><use href="#mark-rev"/></svg>
+          <div class="bw">CENIT<em>LAB</em></div>
+          <div class="bt">Human — Machine Collaboration</div>
+        </div>
+        <div class="mcap">Portada / banner de redes</div>
+      </div>
+
+      <div class="mock reveal">
+        <div class="body brw">
+          <div class="bar"><div class="tab"><svg viewBox="0 0 220 220"><use href="#app-icon"/></svg>Cenit Lab · Manual de Marca</div></div>
+          <div class="url"><b>why.cenitlab.cl</b></div>
+          <div class="pg"><svg viewBox="0 0 120 120"><use href="#mark-rev"/></svg></div>
+        </div>
+        <div class="mcap">Favicon en el navegador</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 DESCARGAS ============ -->
+<section class="sec-bone" id="descargas">
+  <div class="wrap">
+    <div class="eyebrow reveal">12 · Descargas</div>
+    <h2 class="reveal">Todo, listo para bajar.</h2>
+
+    <div class="dl-featured reveal">
+      <svg class="df-mark" viewBox="0 0 220 220" aria-hidden="true"><use href="#app-icon"/></svg>
+      <div class="df-txt">
+        <h3>Kit de marca completo</h3>
+        <p>Logos en SVG, SVG en trazos y PNG (fondo claro/oscuro/transparente), favicon y PWA, design tokens, la guía del símbolo y este manual en PDF. Un solo ZIP.</p>
+      </div>
+      <a class="btn-gold" href="/assets/descargas/CenitLab-BrandKit-v1.zip" download>Descargar kit (.zip)</a>
+    </div>
+
+    <div class="dl-grid reveal">
+      <a class="dl-card" href="/assets/logos/svg/cenit-lab-isotipo.svg" download>
+        <div class="dl-prev chk"><svg viewBox="0 0 120 120"><use href="#mark-core"/></svg></div>
+        <div class="dl-body"><span class="dl-fmt">SVG · vector</span><span class="dl-name">Isotipo</span>
+        <span class="dl-desc">Solo el símbolo, a color, fondo transparente.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/logos/svg/cenit-lab-logo-horizontal.svg" download>
+        <div class="dl-prev light"><svg viewBox="0 0 560 170"><use href="#logo-h"/></svg></div>
+        <div class="dl-body"><span class="dl-fmt">SVG · vector</span><span class="dl-name">Logo horizontal</span>
+        <span class="dl-desc">Lockup primario, para fondos claros.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/logos/svg/cenit-lab-logo-horizontal-rev.svg" download>
+        <div class="dl-prev dark"><svg viewBox="0 0 560 170"><use href="#logo-h-rev"/></svg></div>
+        <div class="dl-body"><span class="dl-fmt">SVG · vector</span><span class="dl-name">Logo invertido</span>
+        <span class="dl-desc">Texto hueso, para fondos oscuros.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/logos/svg/cenit-lab-logo-vertical.svg" download>
+        <div class="dl-prev light"><svg viewBox="0 0 420 320"><use href="#logo-v"/></svg></div>
+        <div class="dl-body"><span class="dl-fmt">SVG · vector</span><span class="dl-name">Logo vertical</span>
+        <span class="dl-desc">Apilado + tagline, para tarjetas y avatares.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/logos/svg/cenit-lab-app-icon.svg" download>
+        <div class="dl-prev light"><svg viewBox="0 0 220 220"><use href="#app-icon"/></svg></div>
+        <div class="dl-body"><span class="dl-fmt">SVG · vector</span><span class="dl-name">App icon</span>
+        <span class="dl-desc">Squircle índigo, autocontenido.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/logos/png/isotipo-1024.png" download>
+        <div class="dl-prev chk"><img src="/assets/logos/png/isotipo-512.png" alt="Isotipo PNG" style="max-height:76px"></div>
+        <div class="dl-body"><span class="dl-fmt">PNG · 1024px</span><span class="dl-name">Isotipo (PNG)</span>
+        <span class="dl-desc">Mapa de bits transparente, alta resolución.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/descargas/CenitLab-BrandBook.pdf" download>
+        <div class="dl-prev dark"><span class="fmtbig">PDF</span></div>
+        <div class="dl-body"><span class="dl-fmt">PDF · 8 págs</span><span class="dl-name">Manual de marca</span>
+        <span class="dl-desc">El brandbook completo para enviar o imprimir.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/tokens/tokens.css" download>
+        <div class="dl-prev dark"><span class="fmtbig">{ } CSS</span></div>
+        <div class="dl-body"><span class="dl-fmt">CSS · tokens</span><span class="dl-name">Design tokens (CSS)</span>
+        <span class="dl-desc">Variables --gold, --indigo, --steel… para dev.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/tokens/tokens.json" download>
+        <div class="dl-prev dark"><span class="fmtbig">JSON</span></div>
+        <div class="dl-body"><span class="dl-fmt">JSON · tokens</span><span class="dl-name">Design tokens (JSON)</span>
+        <span class="dl-desc">Mismos tokens, machine-readable.</span><span class="dl-go">Descargar</span></div></a>
+      <a class="dl-card" href="/assets/icons/favicon.svg" download>
+        <div class="dl-prev light"><svg viewBox="0 0 220 220"><use href="#app-icon"/></svg></div>
+        <div class="dl-body"><span class="dl-fmt">SVG · favicon</span><span class="dl-name">Favicon</span>
+        <span class="dl-desc">El set completo PWA viene en el kit .zip.</span><span class="dl-go">Descargar</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <svg class="fmark" viewBox="0 0 120 120"><use href="#mark-rev"/></svg>
+  <div class="fw">CENIT<em>LAB</em></div>
+  <div class="fmeta">Manual de marca · v1.0 · documento vivo · 2026</div>
+  <div class="fcopy">© 2026 Cenit Lab SpA · Todos los derechos reservados</div>
+  <div class="fdisc">El isotipo, el wordmark, la paleta cromática, la tipografía aplicada y los demás activos de marca aquí presentados son propiedad de Cenit Lab SpA y están protegidos por las leyes de propiedad intelectual e industrial. Su uso se permite únicamente conforme a los lineamientos de este manual. Queda prohibida su reproducción, modificación, ingeniería inversa o distribución, total o parcial, sin autorización previa y por escrito de Cenit Lab SpA. Consultas: <a href="mailto:evaras@cenitlab.cl">evaras@cenitlab.cl</a>.</div>
+</footer>
+
+<!-- reusable lockup symbols (defined after use is fine for SVG <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="logo-h" viewBox="0 0 560 170">
+    <g transform="translate(30,25) scale(1.2)"><use href="#mark-core"/></g>
+    <text x="180" y="108" font-family="'Space Grotesk',sans-serif" font-size="62" letter-spacing="4"><tspan font-weight="600" fill="#0D1430">CENIT</tspan><tspan font-weight="600" fill="#C6A35B" dx="14">LAB</tspan></text>
+  </symbol>
+  <symbol id="logo-h-rev" viewBox="0 0 560 170">
+    <g transform="translate(30,25) scale(1.2)"><use href="#mark-core-rev"/></g>
+    <text x="180" y="108" font-family="'Space Grotesk',sans-serif" font-size="62" letter-spacing="4"><tspan font-weight="600" fill="#F4F1E9">CENIT</tspan><tspan font-weight="600" fill="#D8B86E" dx="14">LAB</tspan></text>
+  </symbol>
+  <symbol id="logo-h-mono" viewBox="0 0 560 170">
+    <g transform="translate(30,25) scale(1.2)" color="currentColor"><use href="#mark-core-mono"/></g>
+    <text x="180" y="108" font-family="'Space Grotesk',sans-serif" font-size="62" letter-spacing="4" fill="currentColor" font-weight="600"><tspan>CENIT</tspan><tspan dx="14">LAB</tspan></text>
+  </symbol>
+  <symbol id="logo-v" viewBox="0 0 420 320">
+    <g transform="translate(102,18) scale(1.75)"><use href="#mark-core"/></g>
+    <text x="210" y="258" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="40" letter-spacing="3"><tspan font-weight="600" fill="#0D1430">CENIT</tspan><tspan font-weight="600" fill="#C6A35B" dx="9">LAB</tspan></text>
+    <text x="210" y="286" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="4" fill="#6B7385">HUMAN · MACHINE COLLABORATION</text>
+  </symbol>
+  <symbol id="app-icon" viewBox="0 0 220 220">
+    <rect x="0" y="0" width="220" height="220" rx="50" fill="#0D1430"/>
+    <rect x="0" y="0" width="220" height="220" rx="50" fill="url(#g)" opacity="0"/>
+    <g transform="translate(35,42) scale(1.25)"><use href="#mark-core-rev"/></g>
+  </symbol>
+
+  <!-- mark cores (paths only, drawn in 120-space for transform reuse) -->
+  <g id="mark-core">
+    <circle cx="60" cy="20" r="18" fill="url(#g)"/>
+    <path d="M28 98 C 33 54, 50 30, 60 22" stroke="#C6A35B" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <path d="M92 98 C 87 54, 70 30, 60 22" stroke="#8FA8CE" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <circle cx="60" cy="20" r="10.5" stroke="#C6A35B" stroke-width="1.4" opacity="0.4" fill="none"/>
+    <circle cx="60" cy="20" r="6" fill="url(#z)"/>
+    <circle cx="58" cy="18" r="1.8" fill="#FBF6EA" opacity="0.9"/>
+  </g>
+  <g id="mark-core-rev">
+    <circle cx="60" cy="20" r="18" fill="url(#g)"/>
+    <path d="M28 98 C 33 54, 50 30, 60 22" stroke="#D8B86E" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <path d="M92 98 C 87 54, 70 30, 60 22" stroke="#A6BEDE" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <circle cx="60" cy="20" r="10.5" stroke="#D8B86E" stroke-width="1.4" opacity="0.45" fill="none"/>
+    <circle cx="60" cy="20" r="6" fill="url(#z)"/>
+    <circle cx="58" cy="18" r="1.8" fill="#FBF6EA" opacity="0.95"/>
+  </g>
+  <g id="mark-core-mono">
+    <path d="M28 98 C 33 54, 50 30, 60 22" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <path d="M92 98 C 87 54, 70 30, 60 22" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <circle cx="60" cy="20" r="10.5" stroke="currentColor" stroke-width="1.4" opacity="0.35" fill="none"/>
+    <circle cx="60" cy="20" r="6" fill="currentColor"/>
+  </g>
+</defs></svg>
+
+<script>
+  (function(){
+    var hasIO = 'IntersectionObserver' in window;
+    var topbar = document.getElementById('topbar');
+    var hero   = document.getElementById('top');
+
+    /* --- reveal al entrar en viewport (con fallback: si no hay IO, todo visible) --- */
+    var els = document.querySelectorAll('.reveal');
+    if(!hasIO){
+      els.forEach(function(e){e.classList.add('in')});
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    }
+
+    /* --- topbar: aparece al pasar el hero --- */
+    function toggleBar(){ if(topbar) topbar.classList.toggle('show', window.scrollY > (hero ? hero.offsetHeight - 80 : 400)); }
+    toggleBar();
+    window.addEventListener('scroll', toggleBar, {passive:true});
+
+    /* --- scroll-spy: resalta el enlace de la sección visible --- */
+    if(hasIO && topbar){
+      var links = {};
+      topbar.querySelectorAll('.tb-nav a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+      var spy = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            Object.keys(links).forEach(function(k){ links[k].classList.toggle('active', k===en.target.id); });
+            var act = links[en.target.id];
+            if(act && act.scrollIntoView) act.scrollIntoView({block:'nearest',inline:'center'});
+          }
+        });
+      },{rootMargin:'-45% 0px -50% 0px'});
+      Object.keys(links).forEach(function(id){ var s=document.getElementById(id); if(s) spy.observe(s); });
+    }
+  })();
+</script>
+
+<!-- buscador del manual (menú hamburguesa) -->
+<script>
+  (function(){
+    var fab = document.getElementById('menuFab');
+    var overlay = document.getElementById('searchOverlay');
+    var input = document.getElementById('searchInput');
+    var box = document.getElementById('searchResults');
+    if(!fab || !overlay || !input || !box) return;
+
+    // sinónimos/keywords en español por sección (enriquecen la búsqueda)
+    var KW = {
+      proposito:"proposito porque mision vision integracion humano maquina capa de inteligencia cisne friccion lujo sin friccion futuro",
+      disciplina:"disciplina estudio ingenieria tecnologica que es tres unidades de negocio ai iot ventures capacidad digital fisica",
+      isotipo:"isotipo simbolo marca arcos arco punto cenit oro azul estelar humano maquina construccion geometria significado halo destello",
+      logotipo:"logotipo wordmark logo lockup horizontal cenit lab tinta hueso",
+      variaciones:"variaciones versiones fondos invertido claro oscuro monocromo sobre fondo",
+      color:"color colores cromatico paleta hex indigo oro hueso azul estelar acento tokens",
+      tipografia:"tipografia fuentes tipos space grotesk ibm plex sans mono pesos titulares cuerpo datos",
+      submarcas:"submarcas sub-marcas unidades ai iot ventures codigos cl domotica hardware sensores venture capital inversion alianzas socios estrategicos llm data software apps startups",
+      usos:"usos reglas proteccion area de aire tamaño minimo no deformar recolorear rotar efectos sombras lo que nunca hacemos clear space",
+      voz:"voz tono claro confiado humano preciso mensajes copy escritura",
+      aplicaciones:"aplicaciones marca en uso mockups ejemplos app tarjeta web papeleria",
+      descargas:"descargas descargar bajar download logo logos isotipo svg png pdf vector trazos outlined favicon pwa kit zip tokens css json assets recursos"
+    };
+
+    var norm = function(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); };
+
+    // construir índice desde los enlaces de la topbar
+    var index = [];
+    document.querySelectorAll('.topbar .tb-nav a').forEach(function(a){
+      var id = a.getAttribute('href').slice(1);
+      var sec = document.getElementById(id);
+      if(!sec) return;
+      var h = sec.querySelector('h2,h3');
+      var title = h ? h.textContent.trim() : a.textContent.trim();
+      var text = sec.textContent.replace(/\s+/g,' ').trim();
+      index.push({ id:id, kicker:a.textContent.trim(), title:title,
+                   text:text, hay:norm(a.textContent+' '+title+' '+(KW[id]||'')+' '+text) });
+    });
+
+    var results = [], active = -1;
+
+    function esc(s){ return s.replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];}); }
+    function snippet(item, nq){
+      var t = item.text;
+      var term = (nq.split(/\s+/)[0]||"");
+      var i = term ? norm(t).indexOf(term) : -1;
+      if(i < 0) return esc(t.slice(0,140)) + (t.length>140?"…":"");
+      var start = Math.max(0, i-45), end = i+term.length+90;
+      return (start>0?"…":"") + esc(t.slice(start,i)) + "<mark>" + esc(t.slice(i,i+term.length)) + "</mark>" + esc(t.slice(i+term.length,end)) + (end<t.length?"…":"");
+    }
+
+    function render(q){
+      var nq = norm(q.trim());
+      if(!nq){ results = index.slice(); }
+      else {
+        results = index.map(function(it){
+          var score = 0, tn = norm(it.title), kn = norm(it.kicker);
+          if(tn.indexOf(nq)>=0) score += 100;
+          if(kn.indexOf(nq)>=0) score += 60;
+          if(norm(KW[it.id]||'').indexOf(nq)>=0) score += 40;
+          var ti = it.hay.indexOf(nq);
+          if(ti>=0) score += 20;
+          // por palabras sueltas
+          nq.split(/\s+/).forEach(function(w){ if(w && it.hay.indexOf(w)>=0) score += 5; });
+          return {it:it, score:score};
+        }).filter(function(r){return r.score>0;}).sort(function(a,b){return b.score-a.score;})
+          .map(function(r){return r.it;});
+      }
+      active = results.length ? 0 : -1;
+      box.innerHTML = results.length ? results.map(function(it,i){
+        return '<a href="#'+it.id+'" data-i="'+i+'" class="'+(i===active?'hl':'')+'">'+
+               '<div class="sr-kicker">'+esc(it.kicker)+'</div>'+
+               '<div class="sr-title">'+esc(it.title)+'</div>'+
+               '<div class="sr-snippet">'+snippet(it, nq)+'</div></a>';
+      }).join('') : '<div class="search-empty">Sin resultados para “'+esc(q)+'”.</div>';
+    }
+
+    function open(){ overlay.classList.add('open'); fab.setAttribute('aria-expanded','true');
+      document.body.style.overflow='hidden'; render(''); input.value=''; setTimeout(function(){input.focus();},30); }
+    function close(){ overlay.classList.remove('open'); fab.setAttribute('aria-expanded','false');
+      document.body.style.overflow=''; }
+    function go(i){ var it=results[i]; if(!it) return; close();
+      var el=document.getElementById(it.id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      history.replaceState(null,'','#'+it.id); }
+
+    function setActive(i){
+      var links = box.querySelectorAll('a'); if(!links.length) return;
+      active = (i+links.length)%links.length;
+      links.forEach(function(a,k){ a.classList.toggle('hl',k===active); });
+      links[active].scrollIntoView({block:'nearest'});
+    }
+
+    fab.addEventListener('click', function(){ overlay.classList.contains('open') ? close() : open(); });
+    overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
+    input.addEventListener('input', function(){ render(input.value); });
+    box.addEventListener('click', function(e){ var a=e.target.closest('a'); if(a){ e.preventDefault(); go(+a.dataset.i); } });
+    input.addEventListener('keydown', function(e){
+      if(e.key==='ArrowDown'){ e.preventDefault(); setActive(active+1); }
+      else if(e.key==='ArrowUp'){ e.preventDefault(); setActive(active-1); }
+      else if(e.key==='Enter'){ e.preventDefault(); go(active); }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape' && overlay.classList.contains('open')) close();
+      else if((e.key==='/'||((e.key==='k'||e.key==='K')&&(e.metaKey||e.ctrlKey))) && !overlay.classList.contains('open')){
+        var t=e.target.tagName; if(t!=='INPUT'&&t!=='TEXTAREA'){ e.preventDefault(); open(); }
+      }
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Cenit Lab — Manual de Marca",
+  "short_name": "Cenit Lab",
+  "description": "Sistema de identidad visual de Cenit Lab. Designing the Future of Human–Machine Collaboration.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B1026",
+  "theme_color": "#0D1430",
+  "icons": [
+    { "src": "assets/icons/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

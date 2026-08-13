@@ -1,0 +1,43 @@
+/* ============================================================
+   Cenit Lab — Design Tokens
+   Fuente de verdad para color y tipografía.
+   Importar este archivo o copiar las variables a tu :root.
+   ============================================================ */
+
+/* Carga de tipografías (o usar @import / <link> en el <head>):
+   https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap
+*/
+
+:root{
+  /* ---- Color · Índigo (cielo nocturno / primario) ---- */
+  --cl-indigo:        #0D1430;  /* primario · superficies, texto */
+  --cl-indigo-2:      #16204A;  /* degradados, profundidad */
+  --cl-indigo-deep:   #0B1026;  /* fondo más oscuro */
+
+  /* ---- Color · Oro (lo humano / acento cálido) ---- */
+  --cl-gold:          #C6A35B;  /* acento cálido · humano */
+  --cl-gold-lt:       #D8B86E;  /* trazo humano sobre oscuro / brillos */
+  --cl-gold-dp:       #7E5F1E;  /* eyebrows/labels sobre claro · oscurecido para contraste AA (antes #A8843B = 3.1:1) */
+
+  /* ---- Color · Azul Estelar (la máquina / acento frío) ---- */
+  --cl-steel:         #8FA8CE;  /* acento frío · máquina */
+  --cl-steel-lt:      #A6BEDE;  /* trazo máquina sobre oscuro */
+
+  /* ---- Color · Neutros ---- */
+  --cl-bone:          #F4F1E9;  /* fondo claro, texto invertido */
+  --cl-bone-2:        #FBF9F3;  /* fondo claro alterno */
+  --cl-ink:           #15192B;  /* texto cuerpo sobre claro */
+  --cl-mist:          #565D6E;  /* texto secundario sobre claro · AA 5.8:1 (antes #6B7385 = 4.2:1) */
+  --cl-mist-dk:       #AEB6C7;  /* texto secundario sobre oscuro · AA ~6.8:1 */
+  --cl-line:          #E3DDD1;  /* bordes / hairlines sobre claro */
+  --cl-line-dk:       rgba(255,255,255,.12); /* hairlines sobre oscuro */
+
+  /* ---- Tipografía ---- */
+  --cl-font-display:  'Space Grotesk', system-ui, sans-serif; /* titulares, wordmark */
+  --cl-font-body:     'IBM Plex Sans', system-ui, sans-serif; /* cuerpo, interfaz */
+  --cl-font-mono:     'IBM Plex Mono', ui-monospace, monospace; /* datos, etiquetas, código */
+
+  /* ---- Degradados de marca ---- */
+  --cl-grad-zenith:   linear-gradient(90deg, var(--cl-gold), var(--cl-steel)); /* punto cenit */
+  --cl-grad-sky:      radial-gradient(120% 90% at 50% 8%, #1B2856 0%, var(--cl-indigo) 42%, var(--cl-indigo-deep) 100%);
+}

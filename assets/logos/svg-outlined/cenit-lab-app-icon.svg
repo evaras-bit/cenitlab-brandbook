@@ -1,0 +1,16 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cenit Lab icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="220" y2="220" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#16204A"/><stop offset="1" stop-color="#0B1026"/></linearGradient>
+    <linearGradient id="z" x1="52" y1="20" x2="68" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E4CC8C"/><stop offset="1" stop-color="#A6BEDE"/></linearGradient>
+    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#E4CC8C" stop-opacity="0.5"/><stop offset="1" stop-color="#E4CC8C" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect x="0" y="0" width="220" height="220" rx="50" fill="url(#bg)"/>
+  <g transform="translate(35,42) scale(1.25)">
+    <circle cx="60" cy="20" r="22" fill="url(#g)"/>
+    <path d="M28 98 C 33 54, 50 30, 60 22" stroke="#D8B86E" stroke-width="8" stroke-linecap="round"/>
+    <path d="M92 98 C 87 54, 70 30, 60 22" stroke="#A6BEDE" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="60" cy="20" r="11" stroke="#E4CC8C" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="60" cy="20" r="6.5" fill="url(#z)"/>
+    <circle cx="58" cy="18" r="2" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+</svg>
